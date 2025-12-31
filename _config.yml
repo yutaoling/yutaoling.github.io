@@ -19,8 +19,8 @@ title: Yutao LING # the main title
 tagline: | # it will display as the subtitle
  XJTU, Fudan U, SII<br>
  This homepage is under maintenance...<br>
- yutaoling@stu.xjtu.edu.cn<br>
- yutaoling@outlook.com
+  <a href="mailto:yutaoling@stu.xjtu.edu.cn">yutaoling@stu.xjtu.edu.cn</a><br>
+  <a href="mailto:yutaoling@outlook.com">yutaoling@outlook.com</a>
 
 description: >- # used by seo meta and the atom feed
   Thank you for your visit.
