@@ -1,5 +1,5 @@
 ---
-# layout: timeline
+layout: timeline
 icon: fas fa-line-chart
 order: 2
 title: My Timeline
