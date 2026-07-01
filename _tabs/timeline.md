@@ -7,9 +7,9 @@ title: My Timeline
 
 # Educations
 
-- 2022.09 - 2026.06 **XJTU**: Undergraduate student, Energy and Power Engineering (Dual degree in Material Sciece and Engineering), Qian Xuesen Honors Class & College, Xi'an Jiaotong University.
+- 2022.09 - 2026.06 @ **Xi'an Jiaotong University**: Undergraduate student, Energy and Power Engineering (Dual degree in Material Sciece and Engineering), Qian Xuesen Honors Class & College, Xi'an Jiaotong University.
 
-- Since 2026.09 **Fudan** & **SII**: PhD student, School of Data Science, Fudan University, joint trained at Shanghai Innovation Institute, kindly guided by Prof. Yanwei Fu.
+- Since 2026.09 @ **Fudan University** & **Shanghai Innovation Institute**: PhD student, School of Data Science, Fudan University, joint trained at Shanghai Innovation Institute, kindly guided by Prof. Yanwei Fu.
 
 # Publications
 
