@@ -16,4 +16,4 @@ title: My Timeline
 - 2024.04: CHEN Y, **LING Y**, LIU A, et al. Effects of geometrical parameters on the performance of hydrogen regenerative pumps in proton exchange membrane fuel cell systems[J]. International Journal of Hydrogen Energy, 2024, 77: 732-741. [DOI:10.1016/j.ijhydene.2024.06.191.](https://doi.org/10.1016/j.ijhydene.2024.06.191)
 
 # Internship
-- 2026.03 - 2026.09: I interned at **NeoteAI** as **Robotic Arm Algorithm Engineer**
+- 2026.03 - 2026.08: I interned at **NeoteAI** as **Robotic Arm Algorithm Engineer**
