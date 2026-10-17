@@ -43,6 +43,7 @@ window.homepageContent = {
           { period: '2025.3 — 2026.4', institution: '西安交通大学 能源与动力工程学院 流体机械及工程系 导师：郭朋华教授', detail: '省级大创项目：多模态数据驱动的液滴蒸发-结晶动力学智能建模' },
           { period: '2024.12 — 2025.8', institution: '西安交通大学 能源与动力工程学院 热流科学与工程系 导师：王秋旺教授', detail: '参与项目“月轨热核——基于磁性颗粒循环换热和混合储能系统的双向聚光太阳能温差发电储电系统”，获节能减排大赛国家级一等奖。' },
           { period: '2024.3 — 2025.4', institution: '西安交通大学 能源与动力工程学院 热流科学与工程系 导师：陈磊研究员（正高/博导）', detail: '省级大创项目（主持人）：氢燃料电池流场板结构优化。' },
+          { period: '2023.10 — 2025.6', institution: '西安交通大学 电气工程学院 电器教研室 导师：刘定新教授、王子丰助理教授', detail: '国家级大创，肤康焕颜——等离子体卫士守护皮肤健康' },
           { period: '2023.7 — 2024.11', institution: '西安交通大学 能源与动力工程学院 压缩机工程系 导师：冯健美教授', detail: '科研训练：几何参数对质子交换膜燃料电池系统中氢气循环泵性能的影响、地下储氢工程技术探索。' }
         ]
       },
@@ -108,6 +109,7 @@ window.homepageContent = {
           { period: '2025.3 - 2026.4', institution: 'Department of Fluid Machinery and Engineering, School of Energy and Power Engineering, Xi\'an Jiaotong University. Kindly guided by Prof. Penghua Guo', detail: 'Provincial undergraduate innovation project: intelligent modeling of droplet evaporation and crystallization dynamics using multimodal data.' },
           { period: '2024.12 - 2025.8', institution: 'Department of Thermal-Fluid Science and Engineering, School of Energy and Power Engineering, Xi\'an Jiaotong University. Kindly guided by Prof. Qiuwang Wang', detail: 'Contributed to the "Lunar-Orbit Thermal Core" project: a bidirectional solar-concentrating thermoelectric power generation and storage system using circulating magnetic-particle heat exchange and hybrid energy storage. The project won a national first prize in the Energy Conservation and Emission Reduction Competition.' },
           { period: '2024.3 - 2025.4', institution: 'Department of Thermal-Fluid Science and Engineering, School of Energy and Power Engineering, Xi\'an Jiaotong University. Kindly guided by Research Prof. Lei Chen (full professor rank; doctoral supervisor)', detail: 'Led a provincial undergraduate innovation project on structural optimization of flow-field plates for hydrogen fuel cells.' },
+          { period: '2023.10 - 2025.6', institution: 'Department of Electrical Apparatus, School of Electrical Engineering, Xi\'an Jiaotong University. Kindly guided by Prof. Dingxin Liu and Asst. Prof. Zifeng Wang', detail: 'National undergraduate innovation project: "Skin Health and Rejuvenation — Plasma Guardians for Healthy Skin".' },
           { period: '2023.7 - 2024.11', institution: 'Department of Compressor Engineering, School of Energy and Power Engineering, Xi\'an Jiaotong University. Kindly guided by Prof. Jianmei Feng', detail: 'Research training: effects of geometrical parameters on hydrogen recirculation pump performance in proton exchange membrane fuel cell systems, and exploration of engineering technologies for underground hydrogen storage.' }
         ]
       },
