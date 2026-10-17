@@ -26,9 +26,12 @@ window.homepageSettings = {
     // 如以后使用自定义域名，在此添加域名（不带 https://）。
     hostnames: ['yutaoling.github.io'],
 
-    // MapMyVisitors 为本站生成的 JavaScript 嵌入地址。
+    // MapMyVisitors 为本站生成的图像嵌入地址（map.png），
+    // 相比 JavaScript 小组件更轻，脚本被拦截时也能显示。
     // 使用 HTTPS；本地可通过 /?previewMap=1 单独预览地图。
     // 留空时不显示地图，也不加载地图服务。
-    mapMyVisitorsScriptUrl: 'https://mapmyvisitors.com/map.js?d=EnX6HSce8zrZv_Z9W8fPo0RHuxufV3NGfnkqE35w8Ak&cl=ffffff&w=a'
+    mapMyVisitorsImageUrl: 'https://mapmyvisitors.com/map.png?d=EnX6HSce8zrZv_Z9W8fPo0RHuxufV3NGfnkqE35w8Ak&cl=ffffff',
+    // 可选：点击地图跳转的 MapMyVisitors 公开统计页。
+    mapMyVisitorsProfileUrl: 'https://mapmyvisitors.com/web/1c8x2'
   }
 };

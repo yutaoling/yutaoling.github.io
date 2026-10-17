@@ -201,18 +201,36 @@
     const localPreview = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname)
       && new URLSearchParams(location.search).get('previewMap') === '1';
     if (!config.enabled || (!config.hostnames.includes(location.hostname) && !localPreview)) return;
-    if (!config.mapMyVisitorsScriptUrl) return;
+    if (!config.mapMyVisitorsImageUrl) return;
     try {
-      const url = new URL(config.mapMyVisitorsScriptUrl);
-      if (url.protocol !== 'https:' || url.hostname !== 'mapmyvisitors.com' || url.pathname !== '/map.js') return;
+      const url = new URL(config.mapMyVisitorsImageUrl);
+      if (url.protocol !== 'https:' || url.hostname !== 'mapmyvisitors.com' || url.pathname !== '/map.png') return;
       const container = document.getElementById('visitor-map');
-      const map = document.createElement('script');
-      map.id = 'mapmyvisitors';
-      map.async = true;
-      map.src = url.href;
-      map.onerror = () => { container.hidden = true; };
+      const image = document.createElement('img');
+      image.src = url.href;
+      image.alt = content[language].labels.visitorMap;
+      image.loading = 'lazy';
+      image.decoding = 'async';
+      image.onerror = () => { container.hidden = true; };
+      let node = image;
+      if (config.mapMyVisitorsProfileUrl) {
+        try {
+          const profile = new URL(config.mapMyVisitorsProfileUrl);
+          if (profile.protocol === 'https:' && profile.hostname === 'mapmyvisitors.com') {
+            const anchor = document.createElement('a');
+            anchor.href = profile.href;
+            anchor.title = content[language].labels.visitorMap;
+            anchor.rel = 'noopener';
+            anchor.target = '_blank';
+            anchor.append(image);
+            node = anchor;
+          }
+        } catch {
+          // 公开统计页地址无效时，仅显示图片即可。
+        }
+      }
       container.hidden = false;
-      container.append(map);
+      container.append(node);
     } catch {
       // 未配置有效地图地址时，正文及访问计数仍正常工作。
     }
