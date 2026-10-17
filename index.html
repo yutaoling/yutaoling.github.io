@@ -1,4 +1,70 @@
----
-layout: home
-# Index page
----
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Yutao Ling 的学术主页">
+    <meta name="color-scheme" content="light">
+    <title>凌宇韬 | Yutao Ling</title>
+    <link rel="icon" href="assets/favicons/favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="icon" type="image/png" href="assets/favicons/favicon-32.png" sizes="32x32">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="content.js"></script>
+    <script defer src="settings.js"></script>
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content" data-label="skip">跳到正文</a>
+    <div class="page">
+      <header class="site-header">
+        <div class="institution-logos">
+          <a href="https://www.xjtu.edu.cn/">
+            <img src="assets/logos/xjtu.png" width="64" height="64" alt="西安交通大学" data-logo="xjtu">
+          </a>
+          <a href="https://www.sii.edu.cn/">
+            <img src="assets/logos/sii.png" width="64" height="64" alt="上海创智学院" data-logo="sii">
+          </a>
+          <a href="https://www.fudan.edu.cn/">
+            <img src="assets/logos/fudan.png" width="64" height="64" alt="复旦大学" data-logo="fudan">
+          </a>
+        </div>
+        <p class="random-greeting" id="random-greeting" lang="en">Hello!</p>
+        <button class="language-switch" id="language-switch" type="button" lang="en" aria-label="Switch to English">English</button>
+      </header>
+
+      <nav class="section-nav" aria-label="栏目导航" id="section-nav">
+        <a href="#about" data-section="about">个人简介</a>
+        <a href="#research" data-section="research">研究方向</a>
+        <a href="#education" data-section="education">教育经历</a>
+        <a href="#experience" data-section="experience">科研与工作经历</a>
+        <a href="#publications" data-section="publications">学术论文</a>
+      </nav>
+
+      <div class="page-body">
+        <aside class="profile" aria-label="个人资料" id="profile">
+          <div class="portrait-placeholder" id="portrait-placeholder" data-label="photo">照片</div>
+          <img class="portrait" id="portrait" width="180" height="225" alt="" hidden>
+          <h1 id="profile-name">姓名</h1>
+          <p id="profile-position">身份 / 职称待补充</p>
+          <div class="affiliations" id="profile-affiliations"></div>
+          <div class="contact">
+            <p data-label="email">"example@mail.com"</p>
+            <div id="profile-emails"></div>
+            <ul class="profile-links" id="profile-links"></ul>
+          </div>
+        </aside>
+        <main id="main-content" tabindex="-1"></main>
+      </div>
+
+      <footer class="site-footer">
+        <div class="visitor-count" aria-live="polite">
+          <span id="busuanzi_container_site_pv" style="display: none"><span data-label="pageViews">总访问量</span> <span id="busuanzi_value_site_pv"></span> <span data-label="viewUnit">次</span></span>
+          <span id="busuanzi_container_site_uv" style="display: none"><span data-label="visitors">访客数</span> <span id="busuanzi_value_site_uv"></span> <span data-label="visitorUnit">人</span></span>
+          <span id="statistics-status" data-label="statisticsUnavailable">访问统计暂不可用</span>
+        </div>
+        <div class="visitor-map" id="visitor-map" hidden></div>
+      </footer>
+    </div>
+    <noscript><p class="no-script">请启用 JavaScript 以查看主页内容和切换语言。 Please enable JavaScript to view this page.</p></noscript>
+  </body>
+</html>

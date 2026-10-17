@@ -1,0 +1,114 @@
+:root {
+  color-scheme: light;
+  font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+  font-size: 16px;
+  color: #222;
+  background: #fff;
+  --blue: #0661A8;
+  --rule: #d9dfe4;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; line-height: 1.7; isolation: isolate; }
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 60vmin;
+  height: 60vmin;
+  transform: translate(-50%, -50%);
+  background: url("logo.png") center / contain no-repeat;
+  opacity: 0.1; /* 不透明度 10%，仅作用于背景图片。 */
+  pointer-events: none;
+  z-index: -1;
+}
+button, input, textarea, select { font: inherit; }
+[hidden] { display: none !important; }
+a { color: var(--blue); text-underline-offset: 3px; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+p, ul, ol { margin: 0; }
+
+.page { max-width: 1100px; margin: 0 auto; }
+.site-header { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 16px; padding: 30px 0 26px; }
+.institution-logos { display: flex; align-items: center; gap: 24px; justify-self: start; }
+.institution-logos img { display: block; width: 64px; height: 64px; object-fit: contain; }
+.random-greeting { max-width: min(480px, 100%); font-size: 36px; font-weight: 700; line-height: 1.4; color: var(--blue); text-align: center; overflow-wrap: anywhere; }
+.language-switch { justify-self: end; border: 0; border-bottom: 1px solid var(--rule); padding: 2px 0; background: #fff; color: var(--blue); cursor: pointer; }
+.language-switch:hover { border-color: var(--blue); }
+.section-nav { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; column-gap: 40px; row-gap: 8px; padding: 13px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.section-nav a { text-align: center; text-decoration: none; }
+.section-nav a:hover { text-decoration: underline; }
+.page-body { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 52px; padding: 34px 0 42px; }
+
+.profile { min-width: 0; overflow-wrap: anywhere; }
+.portrait, .portrait-placeholder { width: 180px; height: 225px; margin-bottom: 20px; }
+.portrait { display: block; object-fit: cover; }
+.portrait-placeholder { display: flex; align-items: center; justify-content: center; border: 1px solid var(--rule); color: #707070; }
+h1 { margin: 0 0 10px; font-size: 24px; font-weight: 600; line-height: 1.5; }
+.affiliations { margin-top: 10px; }
+.contact { margin-top: 26px; }
+.contact a { overflow-wrap: anywhere; }
+.profile-links { list-style: none; padding: 0; margin-top: 16px; }
+.profile-links li + li { margin-top: 4px; }
+.unfilled-link { color: #666; }
+
+main { min-width: 0; }
+.content-section { scroll-margin-top: 24px; overflow-wrap: anywhere; }
+.content-section + .content-section { margin-top: 28px; }
+h2 { font-size: 18px; font-weight: 600; line-height: 1.6; color: var(--blue); margin: 0 0 13px; padding-bottom: 7px; border-bottom: 1px solid var(--rule); }
+.paragraphs p + p { margin-top: 8px; }
+.research-list { padding-left: 1.35em; }
+.research-list li + li { margin-top: 3px; }
+.history-list { list-style: none; padding: 0; }
+.history-list li { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 14px; }
+.history-list li + li { margin-top: 10px; }
+.history-period { font-variant-numeric: tabular-nums; }
+.publication-list p { white-space: pre-line; }
+.publication-list p + p { margin-top: 14px; }
+
+.site-footer { border-top: 1px solid var(--rule); padding: 20px 0 28px; color: #666; }
+.visitor-count { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 28px; }
+.visitor-map { width: min(100%, 320px); margin: 20px auto 0; overflow: hidden; }
+.visitor-map img, .visitor-map iframe, .visitor-map canvas { max-width: 100%; }
+/* 覆盖地图插件自带的 Arial 和小字号，与主页统一。 */
+#visitor-map #mapmyvisitors-widget,
+#visitor-map #mapmyvisitors-widget * { font-family: inherit !important; font-size: 16px !important; }
+.skip-link { position: absolute; top: 8px; left: 8px; padding: 6px 12px; background: #fff; transform: translateY(-160%); z-index: 1; }
+.skip-link:focus { transform: translateY(0); }
+.no-script { margin: 24px; text-align: center; }
+
+@media (max-width: 1164px) {
+  .page { margin-right: 32px; margin-left: 32px; }
+}
+@media (max-width: 760px) {
+  .page { margin-right: 20px; margin-left: 20px; }
+  .site-header { padding: 22px 0; }
+  .institution-logos { gap: 16px; }
+  .institution-logos img { width: 52px; height: 52px; }
+  .section-nav { column-gap: 24px; row-gap: 8px; padding: 12px 0; }
+  .page-body { grid-template-columns: minmax(0, 1fr); gap: 32px; padding: 28px 0 32px; }
+  .portrait, .portrait-placeholder { width: 160px; height: 200px; }
+  .contact { margin-top: 18px; }
+  .history-list li { grid-template-columns: 128px minmax(0, 1fr); gap: 12px; }
+}
+@media (max-width: 1024px) {
+  .site-header { grid-template-columns: minmax(0, 1fr) auto; }
+  .institution-logos { grid-column: 1; grid-row: 1; }
+  .language-switch { grid-column: 2; grid-row: 1; }
+  .random-greeting { grid-column: 1 / -1; grid-row: 2; justify-self: center; }
+}
+@media (max-width: 380px) {
+  .institution-logos { gap: 12px; }
+  .institution-logos img { width: 44px; height: 44px; }
+  .history-list li { grid-template-columns: minmax(0, 1fr); gap: 0; }
+}
+@media print {
+  .page { margin: 0; max-width: none; }
+  .language-switch, .random-greeting, .section-nav, .site-footer, .skip-link { display: none; }
+  .site-header { padding: 0 0 20px; }
+  .page-body { grid-template-columns: 180px minmax(0, 1fr); gap: 28px; padding-top: 0; }
+  h2 { break-after: avoid; }
+  li, .portrait { break-inside: avoid; }
+}
