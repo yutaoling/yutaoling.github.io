@@ -70,9 +70,6 @@ h2 { font-size: 18px; font-weight: 600; line-height: 1.6; color: var(--blue); ma
 
 .site-footer { border-top: 1px solid var(--rule); padding: 20px 0 28px; color: #666; }
 .visitor-count { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 28px; }
-.visitor-map { width: min(100%, 320px); margin: 20px auto 0; }
-.visitor-map a { display: block; }
-.visitor-map img { display: block; width: 100%; height: auto; }
 .skip-link { position: absolute; top: 8px; left: 8px; padding: 6px 12px; background: #fff; transform: translateY(-160%); z-index: 1; }
 .skip-link:focus { transform: translateY(0); }
 .no-script { margin: 24px; text-align: center; }

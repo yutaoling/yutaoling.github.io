@@ -56,9 +56,8 @@ window.homepageContent = {
     labels: {
       skip: '跳到正文', photo: '照片', email: '电子邮箱',
       navigation: '栏目导航', profile: '个人资料', unfilled: '待补充',
-      pageViews: '总访问', viewUnit: '次', visitors: '独立访客', visitorUnit: '人',
+      pageViews: '访问次数', viewUnit: '次', visitors: '访客人数', visitorUnit: '人',
       statisticsLoading: '访问统计加载中…', statisticsUnavailable: '访问统计暂不可用',
-      visitorMap: '访客地理分布',
       logos: { xjtu: '西安交通大学', sii: '上海创智学院', fudan: '复旦大学' }
     }
   },
@@ -122,9 +121,8 @@ window.homepageContent = {
     labels: {
       skip: 'Skip to content', photo: 'Photo', email: 'Email',
       navigation: 'Page sections', profile: 'Personal information', unfilled: 'to be added',
-      pageViews: 'Page views', viewUnit: '', visitors: 'Unique visitors', visitorUnit: '',
+      pageViews: 'Page views', viewUnit: '', visitors: 'Visitors', visitorUnit: '',
       statisticsLoading: 'Loading visitor statistics...', statisticsUnavailable: 'Visitor statistics unavailable',
-      visitorMap: 'Visitor locations',
       logos: { xjtu: "Xi'an Jiaotong University", sii: 'Shanghai Innovation Institute', fudan: 'Fudan University' }
     }
   }

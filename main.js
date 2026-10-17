@@ -143,7 +143,6 @@
     for (const link of document.querySelectorAll('[data-section]')) link.textContent = data.sections[link.dataset.section].title;
     document.getElementById('section-nav').setAttribute('aria-label', data.labels.navigation);
     document.getElementById('profile').setAttribute('aria-label', data.labels.profile);
-    document.getElementById('visitor-map').setAttribute('aria-label', data.labels.visitorMap);
     languageButton.textContent = language === 'zh' ? 'English' : '中文';
     languageButton.lang = language === 'zh' ? 'en' : 'zh-CN';
     languageButton.setAttribute('aria-label', language === 'zh' ? 'Switch to English' : '切换到中文');
@@ -196,46 +195,6 @@
     document.body.append(script);
   }
 
-  function loadVisitorMap() {
-    const config = settings.statistics;
-    const localPreview = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname)
-      && new URLSearchParams(location.search).get('previewMap') === '1';
-    if (!config.enabled || (!config.hostnames.includes(location.hostname) && !localPreview)) return;
-    if (!config.mapMyVisitorsImageUrl) return;
-    try {
-      const url = new URL(config.mapMyVisitorsImageUrl);
-      if (url.protocol !== 'https:' || url.hostname !== 'mapmyvisitors.com' || url.pathname !== '/map.png') return;
-      const container = document.getElementById('visitor-map');
-      const image = document.createElement('img');
-      image.src = url.href;
-      image.alt = content[language].labels.visitorMap;
-      image.loading = 'lazy';
-      image.decoding = 'async';
-      image.onerror = () => { container.hidden = true; };
-      let node = image;
-      if (config.mapMyVisitorsProfileUrl) {
-        try {
-          const profile = new URL(config.mapMyVisitorsProfileUrl);
-          if (profile.protocol === 'https:' && profile.hostname === 'mapmyvisitors.com') {
-            const anchor = document.createElement('a');
-            anchor.href = profile.href;
-            anchor.title = content[language].labels.visitorMap;
-            anchor.rel = 'noopener';
-            anchor.target = '_blank';
-            anchor.append(image);
-            node = anchor;
-          }
-        } catch {
-          // 公开统计页地址无效时，仅显示图片即可。
-        }
-      }
-      container.hidden = false;
-      container.append(node);
-    } catch {
-      // 未配置有效地图地址时，正文及访问计数仍正常工作。
-    }
-  }
-
   render();
   showRandomGreeting();
   window.addEventListener('pageshow', event => {
@@ -245,5 +204,4 @@
   const initialSection = sectionOrder.find(id => location.hash === `#${id}`);
   if (initialSection) requestAnimationFrame(() => document.getElementById(initialSection).scrollIntoView());
   loadStatistics();
-  loadVisitorMap();
 })();
