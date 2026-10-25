@@ -24,6 +24,11 @@ window.homepageSettings = {
     enabled: true,
     // 仅在正式域名加载统计，避免本地预览被计入访问量。
     // 如以后使用自定义域名，在此添加域名（不带 https://）。
-    hostnames: ['yutaoling.github.io']
+    hostnames: ['yutaoling.github.io'],
+    // 优先使用镜像站点；镜像不可用时回退到 Busuanzi 主站。
+    scriptSources: [
+      'https://busuanzi.icodeq.com/busuanzi/2.3/busuanzi.pure.mini.js',
+      'https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
+    ]
   }
 };

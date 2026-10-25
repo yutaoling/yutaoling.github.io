@@ -175,24 +175,39 @@
     if (!config.enabled || !config.hostnames.includes(location.hostname)) return;
     setStatisticsState('statisticsLoading');
     const values = ['site_pv', 'site_uv'].map(key => document.getElementById(`busuanzi_value_${key}`));
+    const sources = Array.isArray(config.scriptSources) ? config.scriptSources.filter(Boolean) : [];
+    if (!sources.length) {
+      setStatisticsState('statisticsUnavailable');
+      return;
+    }
+    let sourceIndex = 0;
+    let timeout;
+    let settled = false;
     const observer = new MutationObserver(() => {
       if (values.some(node => node.textContent.trim())) {
         status.hidden = true;
         clearTimeout(timeout);
+        settled = true;
       }
       if (values.every(node => node.textContent.trim())) observer.disconnect();
     });
     for (const value of values) observer.observe(value, { childList: true, characterData: true, subtree: true });
-    const timeout = setTimeout(() => setStatisticsState('statisticsUnavailable'), 10000);
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js';
-    script.onerror = () => {
+    const tryNextSource = () => {
+      if (settled) return;
       clearTimeout(timeout);
-      observer.disconnect();
-      setStatisticsState('statisticsUnavailable');
+      if (sourceIndex >= sources.length) {
+        observer.disconnect();
+        setStatisticsState('statisticsUnavailable');
+        return;
+      }
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = sources[sourceIndex++];
+      script.onerror = tryNextSource;
+      timeout = setTimeout(tryNextSource, 10000);
+      document.body.append(script);
     };
-    document.body.append(script);
+    tryNextSource();
   }
 
   render();
