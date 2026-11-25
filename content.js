@@ -19,7 +19,7 @@ window.homepageContent = {
         title: '个人简介',
         paragraphs: [
           '复旦大学大数据学院博士研究生，主要在上海创智学院接受培养，本科毕业于西安交通大学能源与动力工程学院。我的导师是　[付彦伟教授](https://yanweifu.github.io/)。目前研究方向聚焦于具身智能、机器人等领域中的硬件、软件问题。期待与各位学术同行、业界朋友交流合作。',
-          '学术之外：我来自四川峨眉，对学生工作、“传帮带”、音乐等主题感兴趣，很高兴认识新朋友。',
+          '学术之外：我来自四川峨眉，对美剧英剧、音乐等主题感兴趣，很高兴认识新朋友。',
           '欢迎您通过邮箱同我联系（优先选择我的创智邮箱），我通常1天内会回复。'
         ]
       },
@@ -82,7 +82,7 @@ window.homepageContent = {
         title: 'About',
         paragraphs: [
           'I\'m a PhD student at the School of Data Science, Fudan University, primarily based at the Shanghai Innovation Institute. I completed my undergraduate studies at the School of Energy and Power Engineering, Xi\'an Jiaotong University. I\'m kindly supervised by [Prof. Yanwei Fu](https://yanweifu.github.io/). My research focuses on hardware and software challenges in embodied intelligence and robotics. I welcome opportunities to exchange ideas and collaborate with colleagues in academia and industry.',
-          'Outside academia, I\'m from Sichuan, China. I\'m interested in student affairs, sharing experience with other students, and music. I enjoy meeting new people.',
+          'Outside academia, I\'m from Sichuan, China. I\'m interested in American and British TV shows, and music. I enjoy meeting new people.',
           'Please feel free to contact me by email (preferably at my SII address). I usually reply within 1 day.'
         ]
       },
