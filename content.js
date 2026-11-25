@@ -50,7 +50,7 @@ window.homepageContent = {
       publications: {
         title: '论文发表',
         items: [
-          'CHEN Y H, LING Y T, LIU A M, et al. Effects of geometrical parameters on the performance of hydrogen regenerative pumps in proton exchange membrane fuel cell systems[J]. International Journal of Hydrogen Energy, 2024, 77: 732-741. DOI: 10.1016/j.ijhydene.2024.06.191.'
+          'CHEN Y H, **LING Y T**, LIU A M, et al. Effects of geometrical parameters on the performance of hydrogen regenerative pumps in proton exchange membrane fuel cell systems[J]. International Journal of Hydrogen Energy, 2024, 77: 732-741. DOI: 10.1016/j.ijhydene.2024.06.191.'
         ]
       }
     },
@@ -116,7 +116,7 @@ window.homepageContent = {
       publications: {
         title: 'Publications',
         items: [
-          'CHEN Y H, LING Y T, LIU A M, et al. Effects of geometrical parameters on the performance of hydrogen regenerative pumps in proton exchange membrane fuel cell systems[J]. International Journal of Hydrogen Energy, 2024, 77: 732-741. DOI: 10.1016/j.ijhydene.2024.06.191.'
+          'CHEN Y H, **LING Y T**, LIU A M, et al. Effects of geometrical parameters on the performance of hydrogen regenerative pumps in proton exchange membrane fuel cell systems[J]. International Journal of Hydrogen Energy, 2024, 77: 732-741. DOI: 10.1016/j.ijhydene.2024.06.191.'
         ]
       }
     },
