@@ -49,14 +49,18 @@
     }
   }
 
-  // 简介和单位名称支持 [链接文字](网址)，其他文字仍按纯文本显示。
+  // 简介、单位名称和论文条目支持 [链接文字](网址) 与 **加粗**，其他文字仍按纯文本显示。
   function linkedParagraph(text) {
     const paragraph = element('p');
-    const pattern = /\[([^\]]+)\]\(([^\s)]+)\)/g;
+    const pattern = /\[([^\]]+)\]\(([^\s)]+)\)|\*\*([^*]+)\*\*/g;
     let cursor = 0;
     for (const match of text.matchAll(pattern)) {
       paragraph.append(document.createTextNode(text.slice(cursor, match.index)));
-      paragraph.append(safeLink(match[1], match[2]) || document.createTextNode(match[0]));
+      if (match[1] !== undefined) {
+        paragraph.append(safeLink(match[1], match[2]) || document.createTextNode(match[0]));
+      } else {
+        paragraph.append(element('strong', match[3]));
+      }
       cursor = match.index + match[0].length;
     }
     paragraph.append(document.createTextNode(text.slice(cursor)));
@@ -127,7 +131,7 @@
       section.append(list);
     } else if (id === 'publications') {
       const list = element('div', undefined, 'publication-list');
-      list.append(...data.items.map(citation => element('p', citation)));
+      list.append(...data.items.map(linkedParagraph));
       section.append(list);
     }
     return section;
